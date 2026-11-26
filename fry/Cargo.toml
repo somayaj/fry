@@ -3,8 +3,15 @@ name = "fry"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
+repository.workspace = true
+homepage.workspace = true
 description = "Embedded log-structured KV + inbox for multi-agent shared memory"
-readme = "README.md"
+documentation = "https://docs.rs/fry"
+readme = "../README.md"
+authors = ["somayaj"]
+keywords = ["agent", "embedded", "inbox", "kv", "wal"]
+categories = ["database", "command-line-utilities"]
+exclude = ["/docs", "/.cargo"]
 
 [lib]
 name = "fry"
