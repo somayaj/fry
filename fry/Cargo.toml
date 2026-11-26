@@ -1,0 +1,26 @@
+[package]
+name = "fry"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Embedded log-structured KV + agent inbox for nanovm"
+readme = "README.md"
+
+[lib]
+name = "fry"
+path = "src/lib.rs"
+
+[[bin]]
+name = "fry"
+path = "src/bin/fry.rs"
+
+[dependencies]
+base64 = "0.22"
+fs2 = "0.4.3"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+uuid = { version = "1", features = ["v4", "serde"] }
+
+[dev-dependencies]
+tempfile = "3"

@@ -1,0 +1,2 @@
+# Cross-linker is set in the Makefile via
+# CARGO_TARGET_AARCH64_UNKNOWN_LINUX_MUSL_LINKER for macOS hosts only.
