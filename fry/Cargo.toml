@@ -3,7 +3,7 @@ name = "fry"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
-description = "Embedded log-structured KV + agent inbox for nanovm"
+description = "Embedded log-structured KV + inbox for multi-agent shared memory"
 readme = "README.md"
 
 [lib]

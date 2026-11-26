@@ -1,9 +1,7 @@
-.PHONY: build build-musl build-alpine-docker test deploy-nanovm help
+.PHONY: build build-musl build-alpine-docker test help
 
 TARGET := aarch64-unknown-linux-musl
 FRY_BIN := target/$(TARGET)/release/fry
-NANOVM_ROOT ?= $(abspath ../nanovm)
-FRY_DATA_DIR ?= /var/lib/nanovm/fry
 
 build:
 	cargo build --release
@@ -25,17 +23,10 @@ build-alpine-docker:
 	  -v "$(CURDIR)":/src -w /src \
 	  rust:alpine cargo build --release
 	@file target/release/fry || true
-	@echo "Built target/release/fry (Alpine musl via Docker)"
+	@echo "Built target/release/fry (static musl, Linux arm64)"
 
 test:
 	cargo test
 
-deploy-nanovm: build-musl
-	@test -x "$(NANOVM_ROOT)/scripts/deploy-fry.sh" || { \
-	  echo "Missing $(NANOVM_ROOT)/scripts/deploy-fry.sh"; exit 1; \
-	}
-	FRY_ROOT="$(CURDIR)" "$(NANOVM_ROOT)/scripts/deploy-fry.sh"
-
 help:
-	@echo "Targets: build, build-musl, test, deploy-nanovm (needs VM up)"
-	@echo "  NANOVM_ROOT=$(NANOVM_ROOT)"
+	@echo "Targets: build, build-musl, build-alpine-docker, test"

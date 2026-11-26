@@ -1,7 +1,7 @@
 //! **fry** — embedded, log-structured KV + agent inbox.
 //!
 //! Single-writer, append-only WAL (`wal.ndjson`), in-memory indexes rebuilt on open.
-//! Designed for nanovm agents sharing memory on one Alpine guest.
+//! Multiple autonomous agents (CLI jobs, bots, workers) can share one data directory.
 
 mod error;
 mod inbox;
