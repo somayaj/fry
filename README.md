@@ -13,6 +13,23 @@
 | [docs/SPEC.md](docs/SPEC.md) | On-disk format, API/CLI spec, **footprint** |
 | [docs/RUST.md](docs/RUST.md) | Step-by-step Rust integration |
 
+## crates.io
+
+```toml
+[dependencies]
+fry-db = "0.1.0"
+```
+
+```rust
+use fry::FryDb; // library crate name is still `fry`
+```
+
+```bash
+cargo install fry-db   # installs the `fry` CLI binary
+```
+
+https://crates.io/crates/fry-db
+
 ## TL;DR
 
 ```bash

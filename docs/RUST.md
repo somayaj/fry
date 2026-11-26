@@ -6,8 +6,8 @@
 
 ```toml
 [dependencies]
-fry = { path = "../fry/fry" }
-# or: fry = { git = "https://github.com/somayaj/fry" }
+fry-db = "0.1.0"
+# or: fry-db = { git = "https://github.com/somayaj/fry" }
 ```
 
 ## 2. Open, use, close (start / stop)

@@ -1,12 +1,12 @@
 [package]
-name = "fry"
+name = "fry-db"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
 repository.workspace = true
 homepage.workspace = true
 description = "Embedded log-structured KV + inbox for multi-agent shared memory"
-documentation = "https://docs.rs/fry"
+documentation = "https://docs.rs/fry-db"
 readme = "../README.md"
 authors = ["somayaj"]
 keywords = ["agent", "embedded", "inbox", "kv", "wal"]
